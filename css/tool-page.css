@@ -1,0 +1,35 @@
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #f4f4f4;
+    transition: 0.3s;
+    padding: 15px;
+}
+
+.sidebar.active {
+    width: 250px;
+    opacity: 1;
+}
+
+.sidebar.hidden {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .sidebar {
+        width: 60%;
+    }
+}

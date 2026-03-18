@@ -1,0 +1,71 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+/* Tools grid styles */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Tool button styles */
+.tool-button {
+    display: inline-block;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #667eea;
+    color: white;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.tool-button:hover {
+    background: #764ba2;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #667eea;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -25,3 +25,24 @@ navLinks.forEach(link => {
         target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+// Tool card click → page navigation
+const toolCards = document.querySelectorAll(".tool-card");
+
+toolCards.forEach(card => {
+    card.addEventListener("click", () => {
+        const tool = card.dataset.tool;
+
+        const pages = {
+            "activemail": "tools/activemail.html",
+            "king-of-time": "tools/king-of-time.html",
+            "desknet-neo": "tools/desknet-neo.html",
+            "teams": "tools/teams.html",
+            "office-station": "tools/office-station.html",
+            "rakuraku-seisan": "tools/rakuraku-seisan.html"
+        };
+
+        if (pages[tool]) {
+            window.location.href = pages[tool];
+        }
+    });
+});

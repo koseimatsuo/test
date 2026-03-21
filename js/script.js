@@ -34,14 +34,15 @@ toolButtons.forEach(button => {
 
         const tool = button.closest(".tool-card").dataset.tool;
 
-        const pages = {
-            "activemail": "tools/activemail.html",
-            "king-of-time": "tools/king-of-time.html",
-            "desknet-neo": "tools/desknet-neo.html",
-            "teams": "tools/teams.html",
-            "office-station": "tools/office-station.html",
-            "rakuraku-seisan": "tools/rakuraku-seisan.html"
-        };
+const pages = {
+    "activemail": "/test/tools/activemail.html",
+    "king-of-time": "/test/tools/king-of-time.html",
+    "desknet-neo": "/test/tools/desknet-neo.html",
+    "teams": "/test/tools/teams.html",
+    "office-station": "/test/tools/office-station.html",
+    "rakuraku-seisan": "/test/tools/rakuraku-seisan.html"
+};
+
 
         if (pages[tool]) {
             window.location.href = pages[tool];

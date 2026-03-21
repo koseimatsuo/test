@@ -26,11 +26,13 @@ navLinks.forEach(link => {
     });
 });
 // Tool card click → page navigation
-const toolCards = document.querySelectorAll(".tool-card");
+const toolButtons = document.querySelectorAll(".tool-card .btn");
 
-toolCards.forEach(card => {
-    card.addEventListener("click", () => {
-        const tool = card.dataset.tool;
+toolButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.stopPropagation(); // 親への伝播を防ぐ（念のため）
+
+        const tool = button.closest(".tool-card").dataset.tool;
 
         const pages = {
             "activemail": "tools/activemail.html",
@@ -46,3 +48,4 @@ toolCards.forEach(card => {
         }
     });
 });
+
